@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+:root {
+    /* Colors */
+    --Purple100: hsl(254, 88%, 90%);
+    --Purple500: hsl(256, 67%, 59%);
+
+    --Yellow100: hsl(31, 66%, 93%);
+    --Yellow500: hsl(39, 100%, 71%);
+
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 7%);
+}
+
+* {
+    font-family: "DM Sans", sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+    background-color: rgb(230, 233, 234);
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+p {
+    font-weight: 500;
+}
+
+.main {
+    width: 80vw;
+    display: grid;
+    place-content: center;
+    grid-template-areas:
+        "a b b c"
+        "a b b c"
+        "a b b c"
+        "a b b c"
+        "a d e c"
+        "f d e c"
+        "f d e c"
+        "f g h h"
+        "f g h h"
+        "f g h h";
+    padding: 20px;
+    gap: 2;
+    min-height: 100vh;
+}
+
+img {
+    width: 200px;
+}
+
+.card {
+    margin: 10px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 30px;
+    overflow: hidden;
+}
+
+.card:nth-child(1) {
+    grid-area: a;
+}
+
+.card:nth-child(2) {
+    grid-area: b;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:nth-child(2) > h1 {
+    font-weight: 500;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card:nth-child(2) > img {
+    width: 180px;
+}
+
+.card:nth-child(2) > p {
+    margin-top: 5px;
+    margin-bottom: 3rem;
+    color: gainsboro;
+}
+
+.card:nth-child(3) {
+    grid-area: c;
+}
+
+.card:nth-child(3) > img {
+    position: relative;
+    left: 40%;
+    width: 180%;
+}
+
+.card:nth-child(3) > h1 {
+    margin: 20px auto;
+}
+
+.card:nth-child(4) {
+    grid-area: d;
+    padding: 10px 20px;
+}
+
+.card:nth-child(4) > h1 {
+    margin-top: 10px;
+}
+
+.card:nth-child(4) > img {
+    position: relative;
+    margin-top: 0;
+    margin-left: 30px;
+    width: 110%;
+}
+
+.card:nth-child(5) {
+    grid-area: e;
+}
+
+.card:nth-child(5) > h1 {
+    margin: 20px 5px;
+}
+
+.card:nth-child(5) > img {
+    position: relative;
+}
+
+.card:nth-child(6) {
+    grid-area: f;
+}
+
+.card:nth-child(6) > h1 {
+    margin-top: 15px;
+}
+
+.card:nth-child(6) > img {
+    width: 100%;
+}
+
+.card:nth-child(7) {
+    grid-area: g;
+}
+
+.card:nth-child(7) > h1 {
+    margin: 20px auto 0 auto;
+}
+
+.card:nth-child(7) > img {
+    margin-bottom: 10px;
+}
+
+.card:nth-child(8) {
+    grid-area: h;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:nth-child(8) > h1 {
+    margin-left: 15px;
+}
+
+.yellow100 {
+    background-color: var(--Yellow100);
+}
+
+.yellow500 {
+    background-color: var(--Yellow500);
+}
+
+.purple100 {
+    background-color: var(--Purple100);
+}
+
+.purple500 {
+    background-color: var(--Purple500);
+}
+
+.bg-white {
+    background-color: var(--White);
+}
+
+.bg-black {
+    background-color: var(--Black);
+}
+
+.text-white {
+    color: var(--White);
+}
+
+.text-black {
+    color: var(--Black);
+}
+
+.lg-text {
+    font-size: 4rem;
+    display: block;
+}
+
+.color-blue {
+    color: var(--Purple500);
+}
+
+.color-yellow {
+    color: var(--Yellow500);
+}
+
+p {
+    font-size: 18px;
+}
+
+/* Footer */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1400px) {
+    .main {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .main {
+        grid-template-areas:
+            "a b"
+            "c g"
+            "c h"
+            "e f"
+            "d d";
+    }
+
+    .card h1 {
+        font-size: 3rem;
+    }
+
+    .card:nth-child(8) {
+        flex-direction: column;
+    }
+
+    .card:nth-child(8) img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .main {
+        grid-template-areas: "a" "b" "c" "d" "e" "f" "g" "h";
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .main {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    img {
+        width: 100%;
+    }
+}
